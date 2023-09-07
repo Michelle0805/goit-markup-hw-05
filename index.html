@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>goit-markup-hw-04</title>
+    <title>goit-markup-hw-05</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +39,7 @@
         <section class="main-page-hero">
             <div class="container hero-container">
                 <h1 class="main-page-hero-heading">Effective Solutions <br>for Your Business</h1>
-            <button class="main-page-hero-button" type="button">Order Service</button>
+            <button class="main-page-hero-button" type="button" data-modal-open>Order Service</button>
             </div>
         </section>
         
@@ -267,6 +267,23 @@
             
         </div>
     </footer>
+    
+      <div class="modal is-hidden" data-modal>
+        <div class="modal-content">
+            <button class="modal-close" data-modal-close>
+              <div class="close-icon">
+                <svg class="close-icon-svg">
+                  <use href="images/icon.svg#icon-close"></use>
+                </svg>
+              </div>
+            </button>
+            
+        </div>
+      </div>
+   
+    
+
+    <script src="js/modal.js"></script>
 
 </body>
 </html>
