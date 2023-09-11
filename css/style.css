@@ -55,6 +55,7 @@ button {
 
 .header-page a {
   color: var(--navy-blue);
+  transition: color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -81,7 +82,8 @@ button {
   line-height: 24px;
   letter-spacing: 0.32px;
   position: relative;
-  transition: transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
  
@@ -94,31 +96,22 @@ button {
 
 .header-page-item-link::after {
   content: '';
-  width: 100%;
+  width: 0;
   height: 4px;
   border-radius: 2px;
   background-color: var(--ocean);
   position: absolute;
   left: 0;
   bottom: -25px;
-  transition: transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scaleX(0);
-  transform-origin: right;
+  transition: width var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .header-page-menu-list-item:hover .header-page-item-link::after,
 .header-page-menu-list-item:active .header-page-item-link::after {
 
-  content: '';
   width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--ocean);
-  position: absolute;
-  left: 0;
-  bottom: -25px;
-  transform: scaleX(1);
-  transform-origin: left;
+  
   
 }
 
@@ -128,6 +121,7 @@ button {
   font-style: normal;
   gap: 40px;
   align-items: center;
+  transition: color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
  
   
 }
@@ -203,6 +197,7 @@ a {
   cursor: pointer;
   justify-content: center;
   margin: 0 auto;
+  transition: background-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-page-hero-button:hover {
@@ -400,8 +395,8 @@ footer p {
   background: var(--cloud);
   list-style-type: none;
   padding: 12px 24px;
-  transition: transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scaleX(100%);
+  transition: background-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .portfolio-list-button:hover {
@@ -410,7 +405,7 @@ footer p {
   cursor: pointer;
   border-color: var(--ocean);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
-  transform: scaleX(100%);
+  
   
 }
 
@@ -520,14 +515,13 @@ footer p {
   height: 40px;
   border-radius: 20px;
   fill: var(--cloud);
+  transition: background-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
 .social-link:hover {
   background-color: var(--ocean);
   
-
-
 }
 
 .social-link-svg {
@@ -543,8 +537,6 @@ footer p {
   display: flexbox;
   align-items: start;
   align-content: center;
-  transition: transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scaleX(100%);
   
 }
 
@@ -553,6 +545,7 @@ footer p {
   width: 16px;
   align-items: center;
   justify-content: center;
+
 
 }
 
@@ -580,8 +573,8 @@ footer p {
   border-radius: 4px;
   padding: 16px 32px;
   cursor: pointer;
-  transition: transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateX(100%);
+  transition: border-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+  
   
 }
   
@@ -595,18 +588,19 @@ footer p {
  }
  .customer-link {
   color: var(--light-slate);
+  transition: color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
  }
 
 
  .customer-list-item:hover {
   border-color: var(--ocean);
-  transform: translateX(100%);
+  
   
  }
 
  .customer-list-item:hover .customer-link{
   color: var(--ocean);
-  transform: translateX(100%);
+  
  }
 
 
@@ -620,8 +614,8 @@ footer p {
 }
 
 footer .social-link {
-  transition: transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scaleX(100%);
+  transition: background-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 footer .social-link:hover {
