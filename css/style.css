@@ -107,6 +107,12 @@ button {
   
 }
 
+.header-page-item-link.active::after {
+  width: 100%;
+  background-color: var(--ocean);
+
+}
+
 .header-page-menu-list-item:hover .header-page-item-link::after,
 .header-page-menu-list-item:active .header-page-item-link::after {
 
@@ -643,7 +649,8 @@ footer .social-links-item{
   height: 8px;
   width: 8px;
   position: absolute;
-  stroke: var(--navy-blue);
+  fill: currentColor;
+  transition: var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -686,7 +693,7 @@ footer .social-links-item{
 
 }
 
-.close-icon {
+.modal-close {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -696,7 +703,19 @@ footer .social-links-item{
   width: 24px;
   height: 24px;
   position: absolute;
-  top: 24px;
   right: 24px;
+  top: 24px;
+  cursor: pointer;
+  transition: background-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1), 
+  border-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1),
+  color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+.modal-close:hover,
+.modal-close:active {
+  background-color: var(--ocean);
+  border-color: var(--ocean);
+  color: var(--white);
+
+}
